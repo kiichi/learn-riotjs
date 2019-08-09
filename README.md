@@ -4,4 +4,4 @@ Learn modern web programming using Riot4. In this course, you will learn 1. fund
 # Outline
 
 1. Basic
-1.1 Functions
+1. Functions
