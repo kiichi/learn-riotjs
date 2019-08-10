@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learn Riot</title>
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+
+    </head>
+    <body>
+    <section class="section">
+    <div class="container">
+        <div id="page"></div>
+    </div>
+    </section>
+
+    <script src="js/axios.min.js"></script>
+    <script src="js/showdown.min.js"></script>
+    <script src="js/pdfmake.min.js"></script>
+    <script src="js/riot+compiler.min.js"></script>
+    <script>
+        class Publisher {
+            constructor(){
+                this.markdown = new showdown.Converter();
+                this.http = axios;
+            }
+            async getSource(path){
+                const res = await this.http.get(path);
+                return res.data;
+            }
+            getHtml(mdSource){
+                return this.markdown.makeHtml(mdSource);
+            }
+        }
+
+        (async ()=>{
+            const pub = new Publisher();
+            const src = await pub.getSource('./README.md');
+            const html = pub.getHtml(src);
+            document.getElementById('page').innerHTML = html;
+    
+        })();
+   </script>
+</body>
+</html>
