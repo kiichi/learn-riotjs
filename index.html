@@ -14,35 +14,23 @@
     <body>
     <section class="section">
     <div class="container">
-        <div id="page"></div>
         <app></app>
     </div>
     </section>
 
-    <script src="js/axios.min.js"></script>
-    <script src="js/showdown.min.js"></script>
-    <script src="js/pdfmake.min.js"></script>
-    <script src="js/riot+compiler.min.js"></script>
+    <script src="js/vendor/axios.min.js"></script>
+    <script src="js/vendor/showdown.min.js"></script>
+    <script src="js/vendor/pdfmake.min.js"></script>
+    <script src="js/vendor/riot+compiler.min.js"></script>
 
     <script src="tags/app.html" type="riot"></script>
     <script src="tags/content.html" type="riot"></script>
-    <script>
-        class Publisher {
-            constructor(){
-                this.markdown = new showdown.Converter();
-                this.http = axios;
-            }
-            async getSource(path){
-                const res = await this.http.get(path);
-                return res.data;
-            }
-            getHtml(mdSource){
-                return this.markdown.makeHtml(mdSource);
-            }
-        }
+    <script type="module">
+        import Publisher from './js/publisher.js';
 
+        // Main
         (async ()=>{
-            const pub = new Publisher();
+            const pub = new Publisher(axios, new showdown.Converter());
             await riot.compile();
             riot.install(function(component) {
                 component.publisher = pub;
