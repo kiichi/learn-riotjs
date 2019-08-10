@@ -1,0 +1,14 @@
+<app>
+    <content md="{state.src}"></content>
+    <script>
+        export default {
+            state: {
+                src: ''
+            },
+            async onMounted(){
+                this.state.src = await this.publisher.getSource('./README.md');
+                this.update();
+            }
+        }
+    </script>
+</app>

@@ -1,0 +1,12 @@
+<content>
+    <script>
+        export default {
+            onMounted() {
+                this.root.innerHTML = this.publisher.getHtml(this.props.md);
+            },
+            onUpdated() {
+                this.root.innerHTML = this.publisher.getHtml(this.props.md);
+            }
+        }
+    </script>
+</content>
