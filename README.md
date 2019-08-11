@@ -1,9 +1,12 @@
-# learn-riotjs
+# Learn RiotJS
+
 Learn modern web programming using Riot4. In this course, you will learn 1. fundamental of JavaScript and HTML 2. Component Building 3. State Management 4. HTTP, Routing, and JSON
 
 At this point, i'm just buiding publishing site using riot itself. this would takes MD files and render into html or pdf.
 
 I'm planning to write something like below.
+
+[Learn Riot](https://kiichi.github.io/learn-riotjs/)
 
 # Outline
 
