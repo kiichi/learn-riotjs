@@ -24,3 +24,5 @@ I'm planning to write something like below.
     1. each
     1. function
     1. install
+
+TODO: Blueprint JSON, TOC, PDF, menu, theme
