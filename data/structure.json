@@ -11,8 +11,29 @@
         "Facebook":"",
         "Instgram":""
     },
+    "Theme":"Basic",
     "Chapters":[
         {
+            "Type":"Cover",
+            "Title":"Enjoyable RiotJS",
+            "SubTitle":""
+        },
+        {
+            "Type":"TOC",
+            "Title":"Table of Contents"
+        },
+        {
+            "Type":"Content",
+            "Title": "Introduction",
+            "Contents":[
+                {
+                    "Title":"Introduction",
+                    "File":"contents/introduction/introduction.md"
+                }
+            ]
+        },
+        {
+            "Type":"Content",
             "Title": "Basic Javascript",
             "Contents":[
                 {
@@ -26,6 +47,7 @@
             ]
         },
         {
+            "Type":"Content",
             "Title": "Riot",
             "Contents":[
                 {
@@ -35,6 +57,7 @@
             ]
         },
         {
+            "Type":"Content",
             "Title": "Appendix",
             "Contents":[
                 {

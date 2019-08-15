@@ -1,12 +1,26 @@
 <app>
+    <h4>{state.structure.Title}</h3>
+    <ol>
+        <li each="{chapter in state.structure.Chapters}" if="{chapter.Type === 'Content'}">
+            <a href="#" onclick="{()=>menuClicked(chapter)}">{chapter.Title}</a>
+        </li>
+    </ol>
     <content md="{state.src}"></content>
     <script>
         export default {
             state: {
-                src: ''
+                src: '', //
+                structure:[]
             },
             async onMounted(){
-                this.state.src = await this.publisher.getSource('./README.md');
+                this.state.structure = await this.service.getStructure();
+                
+                //this.state.src = await this.publisher.getSource(this.state.structure.Chapters[this.state.currentIndex].File);
+                this.update();
+            },
+            async menuClicked(chapter){
+                console.log(chapter)
+                this.state.src = await this.publisher.getSource(chapter.Contents[0].File);
                 this.update();
             }
         }

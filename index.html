@@ -26,13 +26,16 @@
     <script src="tags/app.html" type="riot"></script>
     <script src="tags/content.html" type="riot"></script>
     <script type="module">
+        import Service from './js/service.js';
         import Publisher from './js/publisher.js';
 
         // Main
         (async ()=>{
+            const srv = new Service(axios);
             const pub = new Publisher(axios, new showdown.Converter());
             await riot.compile();
             riot.install(function(component) {
+                component.service = srv;
                 component.publisher = pub;
             });
             riot.mount('app');
