@@ -1,0 +1,51 @@
+{
+    "Title": "Enjoyable RiotJS",
+    "Meta":{
+        "Author":"Kiichi Takeuchi",
+        "Year": 2019,
+        "Publisher": "Kiichi Takeuchi",
+        "Location": "New York",
+        "Email": "",
+        "Website": "https://github.com/kiichi",
+        "Twitter":"",
+        "Facebook":"",
+        "Instgram":""
+    },
+    "Chapters":[
+        {
+            "Title": "Basic Javascript",
+            "Contents":[
+                {
+                    "Title":"Variable",
+                    "File":"contents/basic-javascript/variable.md"
+                },
+                {
+                    "Title":"Function",
+                    "File":"contents/basic-javascript/function.md"
+                }
+            ]
+        },
+        {
+            "Title": "Riot",
+            "Contents":[
+                {
+                    "Title":"Expression",
+                    "File":"contents/riot/expression.md"
+                }
+            ]
+        },
+        {
+            "Title": "Appendix",
+            "Contents":[
+                {
+                    "Title":"Riot Cheatsheet",
+                    "File":"contents/appendix/cheatsheet.md"
+                },
+                {
+                    "Title":"About this book itself",
+                    "File":"contents/appendix/about.md"
+                }
+            ]
+        }
+    ]
+}
