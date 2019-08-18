@@ -1,11 +1,17 @@
 <app>
-    <h4>{state.structure.Title}</h3>
-    <ol>
-        <li each="{chapter in state.structure.Chapters}" if="{chapter.Type === 'Content'}">
-            <a href="#" onclick="{()=>menuClicked(chapter)}">{chapter.Title}</a>
-        </li>
-    </ol>
-    <content md="{state.src}"></content>
+    <div class="row">
+        <div class="column">
+                <h4>{state.structure.Title}</h3>
+                <ol>
+                    <li each="{chapter in state.structure.Chapters}" if="{chapter.Type === 'Content'}">
+                        <a href="#" onclick="{()=>menuClicked(chapter)}">{chapter.Title}</a>
+                    </li>
+                </ol>
+        </div>
+        <div class="column column-80">
+            <content md="{state.src}"></content>
+        </div>
+    </div>
     <script>
         export default {
             state: {
