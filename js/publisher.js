@@ -3,9 +3,15 @@ class Publisher {
         this.markdown = markdown;
         this.http = http;
     }
-    async getSource(path){
-        const res = await this.http.get(path);
-        return res.data;
+
+    // it takes multiple sources from contents[index].File and returned aggregated results after all promises resolved
+    async getSource(contents){
+        const res = await this.http.all(contents.map(cts=>this.http.get(cts.File)))
+            .then(res=>{
+                //console.log(res.map(re=>re.data).join('\n'));
+                return res.map(re=>re.data).join('\n');
+            });
+        return res;
     }
     getHtml(mdSource){
         return this.markdown.makeHtml(mdSource);
