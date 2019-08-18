@@ -28,4 +28,8 @@ I'm planning to write something like below.
     1. function
     1. install
 
-TODO: Blueprint JSON, TOC, PDF, menu, theme
+TODO: Blueprint JSON, TOC, PDF, menu, theme, routing, expandable menu
+
+Goal: make it look like gitbook
+
+https://router5.js.org/advanced

@@ -3,16 +3,35 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Learn Riot</title>
+    <title>Enjoyable RiotJS by Kiichi Takeuchi</title>
     <!--
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
     -->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic|Source+Code+Pro">
+    <link rel="stylesheet" href="vendor/milligram/normalize.css">
+    <link rel="stylesheet" href="vendor/milligram/milligram.min.css">
+    <link rel="stylesheet" href="vendor/highlight/styles/github-gist.css">
     <style>
+        /* overriding millingram */
         .container {
             margin:20px;
+        }
+        code {
+            font-family: 'Source Code Pro';
+        }
+        h1 {
+            font-size: 2.6rem;
+            line-height: 1.2;
+            border-bottom: 6px solid #f4f5f6;
+            padding-bottom:5px;
+        }
+        h2 {
+            font-size: 2.2rem;
+            line-height: 1.2;
+        }
+        h3 {
+            font-size: 1.8rem;
+            line-height: 1.2;
         }
     </style>
     </head>
@@ -20,11 +39,13 @@
     <div class="container">
         <app></app>
     </div>
+    
 
-    <script src="js/vendor/axios.min.js"></script>
-    <script src="js/vendor/showdown.min.js"></script>
-    <script src="js/vendor/pdfmake.min.js"></script>
-    <script src="js/vendor/riot+compiler.min.js"></script>
+    <script src="vendor/axios.min.js"></script>
+    <script src="vendor/showdown.min.js"></script>
+    <script src="vendor/pdfmake.min.js"></script>
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <script src="vendor/riot+compiler.min.js"></script>
 
     <script src="tags/app.html" type="riot"></script>
     <script src="tags/content.html" type="riot"></script>
@@ -42,6 +63,7 @@
                 component.publisher = pub;
             });
             riot.mount('app');
+            
         })();
    </script>
 </body>

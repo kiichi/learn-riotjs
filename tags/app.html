@@ -1,7 +1,7 @@
 <app>
     <div class="row">
         <div class="column column-20">
-                <h4>{state.structure.Title}</h3>
+                <h2>{state.structure.Title}</h2>
                 <ol>
                     <li each="{chapter in state.structure.Chapters}" if="{chapter.Type === 'Content'}">
                         <a href="#" onclick="{()=>menuClicked(chapter)}">{chapter.Title}</a>
@@ -20,14 +20,16 @@
             },
             async onMounted(){
                 this.state.structure = await this.service.getStructure();
-                
-                //this.state.src = await this.publisher.getSource(this.state.structure.Chapters[this.state.currentIndex].File);
+                await this.loadChapter(this.state.structure.Chapters[5]);
                 this.update();
             },
             async menuClicked(chapter){
+                await this.loadChapter(chapter);
+                this.update();
+            },
+            async loadChapter(chapter){
                 console.log(chapter)
                 this.state.src = await this.publisher.getSource(chapter.Contents);
-                this.update();
             }
         }
     </script>

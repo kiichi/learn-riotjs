@@ -3,6 +3,9 @@
         export default {
             setContent(){
                 this.root.innerHTML = this.publisher.getHtml(this.props.md);
+                this.$$('pre code').forEach((block) => {
+                    hljs.highlightBlock(block);
+                });
             },
             onMounted() {
                 this.setContent();
