@@ -33,3 +33,8 @@ TODO: Blueprint JSON, TOC, PDF, menu, theme, routing, expandable menu
 Goal: make it look like gitbook
 
 https://router5.js.org/advanced
+
+
+Write about module
+
+[Using ES Modules in the Browser Today — SitePoint](https://www.sitepoint.com/using-es-modules/)
