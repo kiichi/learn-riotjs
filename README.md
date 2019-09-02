@@ -28,11 +28,22 @@ I'm planning to write something like below.
     1. function
     1. install
 
-TODO: Blueprint JSON, TOC, PDF, menu, theme, routing, expandable menu
+
+
+TODO
+
+- Render all below or cover page .md
+- Render title
+- Generate hash
+- Generate TOC
+- Blueprint JSON, TOC, PDF, menu, theme, routing, expandable menu
+
 
 Goal: make it look like gitbook
 
 https://router5.js.org/advanced
+
+https://gitbookio.gitbooks.io/documentation
 
 
 Write about module

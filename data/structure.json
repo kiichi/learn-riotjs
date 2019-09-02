@@ -27,8 +27,20 @@
             "Title": "Introduction",
             "Contents":[
                 {
-                    "Title":"Introduction",
-                    "File":"contents/introduction/introduction.md"
+                    "Title":"Background",
+                    "File":"contents/introduction/background.md"
+                },
+                {
+                    "Title":"Structure of this book",
+                    "File":"contents/introduction/structure.md"
+                },
+                {
+                    "Title":"Rules",
+                    "File":"contents/introduction/rules.md"
+                },
+                {
+                    "Title":"Terminology",
+                    "File":"contents/introduction/terminology.md"
                 }
             ]
         },

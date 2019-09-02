@@ -1,4 +1,4 @@
-# Riot 4 Cheat Sheet
+# RiotJS Cheatsheet
 
 # Basics
 
@@ -83,6 +83,9 @@ If you need multiple selectors, such as class or tag name, use ```this.$$('.my-c
     </script>
 </my-tag>
 ```
+
+# Riot Syntax
+
 ## Dynamic component mounting - "is" syntax
 
 <a href="https://next.plnkr.co/edit/XLhH3HPawo6N6FaL" target=_blank>Try this example</a>
@@ -134,7 +137,7 @@ Because notice that
 
 is quivalent of 
 
-```
+```html
 <div is="dashboard"></div>
 ```
 
