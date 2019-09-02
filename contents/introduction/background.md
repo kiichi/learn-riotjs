@@ -1,6 +1,6 @@
 # Background
 
-"Understand and stay way of cargo cult" by <a href="https://blog.juliobiason.net/thoughts/things-i-learnt-the-hard-way/" target="_blank">Julio Biason .Net 4.0 - Things I Learnt The Hard Way</a>
+*"Understand and stay way of cargo cult" by <a href="https://blog.juliobiason.net/thoughts/things-i-learnt-the-hard-way/" target="_blank">Julio Biason .Net 4.0 - Things I Learnt The Hard Way</a>*
 
 I use all range of frameworks depend on my purpose in various teams. For most of my internal company projects don't require heavy lifting frameworks with Node to transpile; such as, Vue, Angular, or React. Having said that, I cannot go back too basic, e.g. only jQuery, in order to avoid that my team goes into some chaotic situation in the future.
 

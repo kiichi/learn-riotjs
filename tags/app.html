@@ -1,12 +1,17 @@
 <app>
     <div class="row">
         <div class="column column-20">
-                <h2>{state.structure.Title}</h2>
-                <ol>
-                    <li each="{chapter in state.structure.Chapters}" if="{chapter.Type === 'Content'}">
-                        <a href="#" onclick="{()=>menuClicked(chapter)}">{chapter.Title}</a>
-                    </li>
-                </ol>
+            <h2>{state.structure.Title}</h2>
+            <ol>
+                <li each="{chapter in state.structure.Chapters}" if="{chapter.Type === 'Chapter'}">
+                    <a href="#" onclick="{()=>menuClicked(chapter)}">{chapter.Title}</a>
+                    <ol if="{chapter.Sections.length > 1}">
+                        <li each="{section in chapter.Sections}">
+                            <a href="#" onclick="{()=>menuClicked(section)}">{section.Title}</a>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
         </div>
         <div class="column column-80">
             <content md="{state.src}"></content>
@@ -27,9 +32,14 @@
                 await this.loadChapter(chapter);
                 this.update();
             },
-            async loadChapter(chapter){
-                console.log(chapter)
-                this.state.src = await this.publisher.getSource(chapter.Contents);
+            async loadChapter(node){
+                console.log(node)
+                if (node.Type === 'Chapter'){
+                    this.state.src = await this.publisher.getSource(node.Sections[0].Contents);
+                }
+                else {
+                    this.state.src = await this.publisher.getSource(node.Contents);
+                }
             }
         }
     </script>

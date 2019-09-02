@@ -23,62 +23,92 @@
             "Title":"Table of Contents"
         },
         {
-            "Type":"Content",
+            "Type":"Chapter",
             "Title": "Introduction",
-            "Contents":[
+            "Sections":[
                 {
-                    "Title":"Background",
-                    "File":"contents/introduction/background.md"
-                },
-                {
-                    "Title":"Structure of this book",
-                    "File":"contents/introduction/structure.md"
-                },
-                {
-                    "Title":"Rules",
-                    "File":"contents/introduction/rules.md"
-                },
-                {
-                    "Title":"Terminology",
-                    "File":"contents/introduction/terminology.md"
+                    "Type":"Section",
+                    "Title":"Preface",
+                    "Contents":[
+                        {
+                            "Title":"Background",
+                            "File":"contents/introduction/background.md"
+                        },
+                        {
+                            "Title":"Structure of this book",
+                            "File":"contents/introduction/structure.md"
+                        },
+                        {
+                            "Title":"Rules",
+                            "File":"contents/introduction/rules.md"
+                        },
+                        {
+                            "Title":"Terminology",
+                            "File":"contents/introduction/terminology.md"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "Type":"Content",
+            "Type":"Chapter",
             "Title": "Basic Javascript",
-            "Contents":[
+            "Sections":[
                 {
-                    "Title":"Variable",
-                    "File":"contents/basic-javascript/variable.md"
-                },
-                {
-                    "Title":"Function",
-                    "File":"contents/basic-javascript/function.md"
+                    "Type":"Section",
+                    "Title":"Fundamental",
+                    "Contents":[
+                        {
+                            "Title":"Variable",
+                            "File":"contents/basic-javascript/variable.md"
+                        },
+                        {
+                            "Title":"Function",
+                            "File":"contents/basic-javascript/function.md"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "Type":"Content",
+            "Type":"Chapter",
             "Title": "Riot",
-            "Contents":[
+            "Sections":[
                 {
-                    "Title":"Expression",
-                    "File":"contents/riot/expression.md"
+                    "Type":"Section",
+                    "Title":"Syntax",
+                    "Contents":[
+                        {
+                            "Title":"Expression",
+                            "File":"contents/riot/expression.md"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "Type":"Content",
+            "Type":"Chapter",
             "Title": "Appendix",
-            "Contents":[
+            "Sections":[
                 {
-                    "Title":"Riot Cheatsheet",
-                    "File":"contents/appendix/cheatsheet.md"
+                    "Type":"Section",
+                    "Title":"Riot Cheetsheet",
+                    "Contents":[
+                        {
+                            "Title":"Riot Cheatsheet",
+                            "File":"contents/appendix/cheatsheet.md"
+                        }
+                    ]
                 },
                 {
-                    "Title":"About this book itself",
-                    "File":"contents/appendix/about.md"
+                    "Type":"Section",
+                    "Title":"About",
+                    "Contents":[
+                        {
+                            "Title":"About this book itself",
+                            "File":"contents/appendix/about.md"
+                        }
+                    ]
                 }
             ]
         }
