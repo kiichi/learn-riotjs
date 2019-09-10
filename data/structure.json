@@ -65,7 +65,12 @@
                         {
                             "Title":"Function",
                             "File":"contents/basic-javascript/function.md"
+                        },
+                        {
+                            "Title":"Class",
+                            "File":"contents/basic-javascript/class.md"
                         }
+
                     ]
                 }
             ]
