@@ -14,7 +14,8 @@
     <style>
         /* overriding millingram */
         .container {
-            margin:20px;
+            margin-top:20px;
+            margin-bottom: 20px;
         }
         code {
             font-family: 'Source Code Pro';
@@ -44,6 +45,7 @@
     <script src="vendor/axios.min.js"></script>
     <script src="vendor/showdown.min.js"></script>
     <script src="vendor/pdfmake.min.js"></script>
+    <script src="vendor/vfs_fonts.js"></script>
     <script src="vendor/highlight/highlight.pack.js"></script>
     <script src="vendor/riot+compiler.min.js"></script>
 
@@ -52,15 +54,17 @@
     <script type="module">
         import Service from './js/service.js';
         import Publisher from './js/publisher.js';
-
+        import PdfEngine from './js/pdf-engine.js';
         // Main
         (async ()=>{
             const srv = new Service(axios);
             const pub = new Publisher(axios, new showdown.Converter());
+            const pdf = new PdfEngine(pdfMake);
             await riot.compile();
             riot.install(function(component) {
                 component.service = srv;
                 component.publisher = pub;
+                component.pdf = pdf;
             });
             riot.mount('app');
             
