@@ -4,7 +4,7 @@ When I work with younger generation of developers, I often find out that they ar
 
 RiotJS is light framework, that is; you need to know basics of Javascript and how DOM works in a browser. It is counter intuitive from the name because the concept of this framework is to follow the decipline of W3C without inventing it's own syntax as mimum as it could be. So I spent a few chapter to cover basic Javascript itself. If you have never took Javascript course from the scratch, at least spend some bucks and take one in Udemy or so.
 It'll cost you around two cups of grande size latte in facy coffeeshop but it will be useful for the rest of your life. 
-In my basic part, I only conver important and common things, just for your refresher if you are intro level.
+In my basic part, I only conver key concepts, it is just for your refresher if you are intro / intermediate level.
 
 In later chapter, I spend most of concepts around RiotJS syntax, and my intention is to explain "why" you "should" do this way. Yes, I often use a word "should" and I wish a reader of this book develop a sense of "should", we engineer often archtect things because it "should" be such a reason. 
 

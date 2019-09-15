@@ -1,6 +1,6 @@
 # Rules
 
-I set following three rules to begin with. This is not universal rules that you have to follow; however, I often apply them in the professional environment as well. I would like to achieve our common goal to simplify our workflow either learning process or professional enviornment.
+I set following three rules to begin with. This is not universal RiotJS rules that you have to follow; however, I often apply them in the professional environment as well. I would like to achieve our common goal to simplify our workflow either learning process or professional enviornment.
 
 <ol>
     <li>No transpiler - This tutorial only need your browser and simple server such as live-server. If I encounter situation that I need a transpiling process, probably I use other Framework.</li>
