@@ -2,7 +2,7 @@
 
 When I work with younger generation of developers, I often find out that they are amazingly fast learner, and they are adapting new technology with no fear; however, many of them tend to skip basics, such as, Javascript itself and how things works in browser. This reminds me many developers around year of 2000 who started with .NET or Java never have opportunity to learn about memory, network, and so on.
 
-RiotJS is light framework, that is; you need to know basics of Javascript and how DOM works in a browser. It is counter intuitive from the name because the concept of this framework is to follow the decipline of W3C without inventing it's own syntax as mimum as it could be. So I spent a few chapter to cover basic Javascript itself. If you have never took Javascript course from the scratch, at least spend some bucks and take one in Udemy or so.
+RiotJS is light framework, that is; you need to know basics of Javascript and how DOM works in a browser. It is counter intuitive from the name because the concept of this framework is to follow the decipline of W3C without inventing it's own syntax as mimum as it could be. That is why I spent a few chapters to cover basic Javascript itself. If you have never took Javascript course from the scratch, at least spend some bucks and take one in Udemy or so.
 It'll cost you around two cups of grande size latte in facy coffeeshop but it will be useful for the rest of your life. 
 In my basic part, I only conver key concepts, it is just for your refresher if you are intro / intermediate level.
 
