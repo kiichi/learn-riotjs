@@ -43,6 +43,10 @@
                             "File":"contents/introduction/rules.md"
                         },
                         {
+                            "Title":"Syntax",
+                            "File":"contents/introduction/syntax.md"
+                        },
+                        {
                             "Title":"Terminology",
                             "File":"contents/introduction/terminology.md"
                         }
