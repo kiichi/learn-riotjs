@@ -16,7 +16,7 @@
         <div class="column">
             <content md="{state.src}"></content>
             <hr/>
-            <button class="button button-outline float-right" onclick="{(()=>downloadPdf(state.src))}">Download PDF (Beta)</button>
+            <button class="button button-outline float-right" onclick="{(()=>downloadPdf(state.src))}">&#128462; Download PDF (Beta)</button>
         </div>
     </div>
     <script>
@@ -45,8 +45,8 @@
             },
             downloadPdf(source){
                 // testing...
-                //const html = this.publisher.getHtml(source);
-                this.pdf.download(source);
+                const html = this.publisher.getHtml(source);
+                this.pdf.download(html);
             }
         }
     </script>
