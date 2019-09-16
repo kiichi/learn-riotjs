@@ -9,7 +9,9 @@
         "Website": "https://github.com/kiichi",
         "Twitter":"",
         "Facebook":"",
-        "Instgram":""
+        "Instgram":"",
+        "Subject": "Programming",
+        "Keywords": "javascript,riotjs,html"
     },
     "Theme":"Basic",
     "Chapters":[

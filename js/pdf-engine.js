@@ -1,20 +1,48 @@
 class PdfEngine {
     constructor(pdf){
         this.pdf = pdf;
+        // title - the title of the document
+        // author - the name of the author
+        // subject - the subject of the document
+        // keywords - keywords associated with the document
+        // creator - the creator of the document (default is ‘pdfmake’)
+        // producer - the producer of the document (default is ‘pdfmake’)
+        // creationDate - the date the document was created (added automatically by pdfmake)
+        // modDate - the date the document was last modified
+        this.info = {
+            title: '',
+            author: '',
+            subject: '',
+            keywords: '',
+            creator: 'RiotBookMaker',
+            producer: 'RiotBookMaker',
+            //creationDate: '',
+            //modDate: ''
+        };
+    }
+    setMetaData(title, author, subject, keywords){
+        this.info.title = title;
+        this.info.author = author;
+        this.info.subject = subject;
+        this.info.keywords = keywords;
     }
     download(html){
+        // console.log(this.info);
         // todo: 
         // md to pdfmake https://github.com/ZEITIO/markdown-to-pdfmake
         // or extension? https://github.com/showdownjs/showdown/wiki/extensions
         // or html to pdfmake https://github.com/Aymkdn/html-to-pdfmake
         const docDefinition = {
+            info: this.info,
             content:[this.htmlToPdfMake(html)]
         };
-        this.pdf.createPdf(docDefinition).download();
+        const fileName = (this.info.title + ' by ' + this.info.author).replace(/ /g,'_');
+        this.pdf.createPdf(docDefinition).download(fileName);
     }
 
-    // source: https://github.com/OpenSlides/OpenSlides/blob/f4f8b8422f9b3fbab58e35ac3f8f870d35813b7d/client/src/app/core/ui-services/html-to-pdf.service.ts
-    // and https://github.com/bpampuch/pdfmake/issues/205
+
+    // Original Source
+    // https://github.com/Aymkdn/html-to-pdfmake
 
     /**
      To use it:

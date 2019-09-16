@@ -12,11 +12,19 @@
                     </ol>
                 </li>
             </ol>
+            <hr/>
+            <p class="copyright">
+                Copyright
+                ©
+                {state.structure.Meta ? state.structure.Meta.Year : ''} <br/>
+            {state.structure.Meta ? state.structure.Meta.Author : ''},
+            All rights reserved
+            </p>
         </div>
         <div class="column">
             <content md="{state.src}"></content>
             <hr/>
-            <button class="button button-outline float-right" onclick="{(()=>downloadPdf(state.src))}">&#128462; Download PDF (Beta)</button>
+            <button class="button button-outline button-small float-right" onclick="{(()=>downloadPdf(state.src))}">&#128462; Download PDF (Beta)</button>
         </div>
     </div>
     <script>
@@ -29,6 +37,11 @@
                 this.state.structure = await this.service.getStructure();
                 await this.loadChapter(this.state.structure.Chapters[5]);
                 this.update();
+
+                this.pdf.setMetaData(this.state.structure.Title,
+                                    this.state.structure.Meta.Author,
+                                    this.state.structure.Meta.Subject,
+                                    this.state.structure.Meta.Keywords);
             },
             async menuClicked(chapter){
                 await this.loadChapter(chapter);
@@ -46,6 +59,7 @@
             downloadPdf(source){
                 // testing...
                 const html = this.publisher.getHtml(source);
+                //console.log(html);
                 this.pdf.download(html);
             }
         }
