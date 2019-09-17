@@ -50,8 +50,15 @@ class PdfEngine {
                 "hljs-keyword":{
                     color:"red"
                 },
+                // "html-code":{
+                //     //background:'lightgray'
+                //     //leadingIndent:
+                // }
                 // "rbook-indent":{
                 //     margin: [ 0, 5, 0, 5 ]
+                // }
+                // "rbook-code": {
+                //     background: 'lightgray'
                 // }
             },
             content:[content]
