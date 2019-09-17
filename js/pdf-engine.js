@@ -32,9 +32,29 @@ class PdfEngine {
         // md to pdfmake https://github.com/ZEITIO/markdown-to-pdfmake
         // or extension? https://github.com/showdownjs/showdown/wiki/extensions
         // or html to pdfmake https://github.com/Aymkdn/html-to-pdfmake
+        const content = this.htmlToPdfMake(html);
+        console.log(content);
+        console.log('TODO: unwrap this content and insert other styles such as margin and border');
         const docDefinition = {
             info: this.info,
-            content:[this.htmlToPdfMake(html)]
+            styles:{
+                "hljs-comment":{ 
+                    color:'gray'
+                },
+                "hljs-attr":{
+                    color:'purple'
+                },
+                "hljs-name":{
+                    color:"green"
+                },
+                "hljs-keyword":{
+                    color:"red"
+                },
+                // "rbook-indent":{
+                //     margin: [ 0, 5, 0, 5 ]
+                // }
+            },
+            content:[content]
         };
         const fileName = (this.info.title + ' by ' + this.info.author).replace(/ /g,'_');
         this.pdf.createPdf(docDefinition).download(fileName);

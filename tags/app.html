@@ -17,8 +17,8 @@
                 Copyright
                 ©
                 {state.structure.Meta ? state.structure.Meta.Year : ''} <br/>
-            {state.structure.Meta ? state.structure.Meta.Author : ''},
-            All rights reserved
+                {state.structure.Meta ? state.structure.Meta.Author : ''},
+                All rights reserved
             </p>
         </div>
         <div class="column">
@@ -59,8 +59,18 @@
             downloadPdf(source){
                 // testing...
                 const html = this.publisher.getHtml(source);
-                //console.log(html);
-                this.pdf.download(html);
+
+                // hljs.configure({
+                //     tabReplace:'<span class="rbook-indent">    </span>'
+                // });
+
+                var elem = document.createElement('html');
+                elem.innerHTML = html;
+                elem.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightBlock(block);
+                });
+                console.log(elem);
+                this.pdf.download(elem.innerHTML);
             }
         }
     </script>
